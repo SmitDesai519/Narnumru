@@ -1,0 +1,83 @@
+.container {
+    max-width: 90%;
+    padding: 1.125rem 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    color: green;
+    margin: auto 0;
+}
+
+.menuOutlined {
+    display: none;
+    margin: auto 0;
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+.navLink {
+    color: #832e4f;
+    text-decoration: none;
+    margin: 0 2rem;
+}
+
+.bookTableBtn {
+    :global(.ant-btn) {
+        padding: 13.5px 25px;
+        color: white;
+        background-color: #832e4f;
+        font-size: 14px;
+        border: 1px solid #832e4f;
+        margin: 0 2rem;
+        height: auto;
+        border-radius: 0.1875rem;
+    }
+    :global(.ant-btn:hover) {
+        background-color: unset;
+        color: #832e4f;
+    }
+}
+
+.mobileNavLink {
+    display: flex;
+}
+
+.mobileNavLink {
+    display: none;
+}
+
+@media screen and (max-width: 991px) {
+    .container {
+        padding: 1.125rem 0;
+    }
+    .desktopNavLink {
+        display: none;
+    }
+    .menuOutlined {
+        display: block;
+    }
+    .mobileNavLink {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .navLink {
+        margin: 0;
+        padding: 1rem 0;
+        border-bottom: 1px solid #832e4f;
+    }
+    .bookTableBtn {
+        padding-top: 0.5rem;
+        :global(.ant-btn) {
+            padding: 8px;
+            margin: 0;
+        }
+    }
+}
